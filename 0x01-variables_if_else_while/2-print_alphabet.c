@@ -8,7 +8,9 @@
 
 int main(void)
 {
-	for (char m = 'a'; m <= 'z'; m++)
+	char m;
+
+	for (m = 'a'; m <= 'z'; m++)
 		putchar(m);
 	putchar ('\n');
 
