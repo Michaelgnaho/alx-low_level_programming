@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_most_numbers- this func print a string in reverze
+ * reverse_array- this func print a string in reverze
  * @a: first integer
  * @n: second integer
  *
@@ -10,7 +10,7 @@
 
 void reverse_array(int *a, int n)
 {
-	int m,temp;
+	int m, temp;
 
 	for (m = 0; m < n / 2; m++)
 	{
