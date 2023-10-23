@@ -4,7 +4,8 @@
  * _strchr- this func locate characters in a string
  * @s: the string to be checked
  * @c: the character to locate
- * Return: 0 when it is a success
+ * Return: c when it is a success.
+ * if c is not found return NULL.
  */
 
 char *_strchr(char *s, char c)
@@ -17,5 +18,4 @@ char *_strchr(char *s, char c)
 			return (s + m);
 	}
 	return ('\0');
-
 }
