@@ -1,32 +1,81 @@
 #include "3-calc.h"
 #include <stdlib.h>
+#include <stdio.h>
+
+int op_add(int a, int b);
+int op_sub(int a, int b);
+int op_mul(int a, int b);
+int op_div(int a, int b);
+int op_mod(int a, int b);
+
 /**
- * get_op_func - Selects the correct function to perform
- *               the operation asked by the user.
- * @s: The operator passed as argument.
- *
- * Return: A pointer to the function corresponding
- * to the operator given as a parameter.
- */
-int (*get_op_func(char *s))(int, int)
+* op_add– function for addition
+* @a: first parameter
+* @b: second parameter
+*
+* Return: 0 if it is a sucess
+*/
+int op_add(int a, int b)
 {
-		op_t ops[] = {
-			{"+", op_add},
-			{"-", op_sub},
-			{"*", op_mul},
-			{"/", op_div},
-			{"%", op_mod},
-			{NULL, NULL},
-		};
+return (a + b);
+}
 
+/**
+ * op_sub – function for subtrsction
+ * @a: first para meter
+ * @b: second parameter
+ *
+ * Return: 0 if its a sucess
+*/
+int op_sub(int a, int b)
+{
+return (a – b);
+}
 
-		int i = 0;
+/**
+* op_mul –  function for multiplication
+* @a: first parameter
+* @b: second parameter
+*
+* Return: 0 if its a sucess
+*/
+int op_mul(int a, int b)
+{
+return (a * b);
+}
 
+/**
+* op_div – fuction for division
+* @a: first opsrsmeter
+* @b: second parameter
+*
+* Return: 0 if it is a sucess
+*/
+int op_div(int a, int b)
+{
+if (b == 0)
+{
+printf(“Errorn”);
+exit(100);
+}
 
-		while (ops[i].op != NULL && *(ops[i].op) != *s)
-			i++;
+return (a / b);
+}
 
+/**
+* op_mod – function for modulo
+* @a: first psrsmeter
+* @b: second parameter
+*
+* Return: 0 if it is a success
+*/
+int op_mod(int a, int b)
+{
+if (b == 0)
+{
+printf(“Errorn”);
+exit(100);
+}
 
-		return (ops[i].f);
-	}
-
+return (a % b);
+}
